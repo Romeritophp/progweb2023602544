@@ -1,0 +1,41 @@
+<body>
+    <h2>Serie numerica</h2>
+    <script>
+        //inicializacion de mis variables
+        let numeros = [];
+        let suma = 0;
+        
+        document.write("<ol>");
+        
+        for (let i = 2; i <= 400; i += 2) {
+            numeros.push(i);//agrega cada numero al arrray numeros
+            suma += i;
+            document.write("<li>" + i + "</li>");//lo imprimira en una lista ordenada
+        }
+
+        document.write("</ol>");
+
+        //PROMEDIO
+        let promedio = suma / numeros.length;
+//numeros.lenght se usa para obtener la cantidad total de elementos dentro del arreglo 
+      
+//MEDIANA
+        let mediana;
+        let mitad = numeros.length / 2;
+        if (numeros.length % 2 === 0) {//cantidad par
+            mediana = (numeros[mitad - 1] + numeros[mitad]) / 2;
+//El número en la posición 99 es 200.
+//El número en la posición 100 es 202 sumamos y calculamos mediana
+
+        } else {
+            mediana = numeros[Math.floor(mitad)];
+        }
+
+        //MODA
+        let moda = "No hay moda";
+
+        document.write("<p>Promedio: " + promedio + "</p>");
+        document.write("<p>Mediana: " + mediana + "</p>");
+        document.write("<p>Moda: " + moda + "</p>");
+    </script>
+</body>

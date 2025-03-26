@@ -1,0 +1,25 @@
+<body>
+    <h2>Cadena MURCIELAGO</h2>
+    <script>
+        let cadena = "MURCIELAGO";
+        let vocales = "AEIOU";
+        let numVocales = 0;
+        let numConsonantes = 0;
+        let idiomaEfe = "";
+
+        for (let i = 0; i < cadena.length; i++) {
+            let letra = cadena[i];
+            if (vocales.includes(letra)) {
+                numVocales++;
+                idiomaEfe += letra + "F" + letra;
+            } else {
+                numConsonantes++;
+                idiomaEfe += letra;
+            }
+        }
+
+        document.write("Número de vocales: " + numVocales + "<br>");
+        document.write("Número de consonantes: " + numConsonantes + "<br>");
+        document.write("En idioma efe: " + idiomaEfe);
+    </script>
+</body>
