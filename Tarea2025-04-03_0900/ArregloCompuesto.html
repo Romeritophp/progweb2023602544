@@ -1,0 +1,23 @@
+<body>
+    <h2>Arreglo compuesto</h2>
+    <script>
+        let datos = [30, "Texto", true, 30, "Concatenado", false, 9, ":)", true]; 
+        let suma = 0;          
+        let texto = "";         // Para concatenar las cadenas
+        let resultadoAND = true; // Para hacer AND con los booleanos
+
+        for (let i = 0; i < datos.length; i++) {//length devuelve cantidad de elementos 
+            if (typeof datos[i] === "number") { 
+                suma += datos[i]; 
+            } else if (typeof datos[i] === "string") {
+                texto += datos[i] + " "; // Si es cadena, se concatena 
+            } else if (typeof datos[i] === "boolean") {
+                resultadoAND = resultadoAND && datos[i]; // Se hace AND con los booleanos && compara
+            }
+        }
+
+        document.write("Suma numeros: " + suma + "<br>");
+        document.write("Texto concatenado: " + texto + "<br>");
+        document.write("Resultado AND booleanos: " + resultadoAND);
+    </script>
+</body>

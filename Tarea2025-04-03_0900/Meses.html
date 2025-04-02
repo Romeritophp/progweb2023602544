@@ -1,0 +1,14 @@
+<body>
+    <h2>Meses del año</h2>
+    <script>
+        let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+                     "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "iciembre"];
+        let ordinales = ["1°", "2°", "3°", "4°", "5°", "6°", "7°", "8°", "9°", "10°", "11°", "12°"];
+
+        document.write("<ul>");//lista desordenada
+        for (let i = 0; i < 12; i++) {//for para recorrer los meses
+            document.write("<li>" + ordinales[i] + " - " + meses[i] + "</li>");
+        }
+        document.write("</ul>");
+    </script>
+</body>
