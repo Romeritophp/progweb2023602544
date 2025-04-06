@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+div {
+  width: 50px;
+  height: 50px;
+}
+
+#w {background-color:darkred;}
+#a {background-color:darkred;}
+#s {background-color:darkred;}
+#d {background-color:darkred;}
+#z {background-color:darkred;}
+#x {background-color:darkred;}
+</style>
+
+<script>
+    document.addEventListener('keydown', function(event) {
+        var key = event.key;
+        if (document.getElementById(key)) {
+            document.getElementById(key).style.backgroundColor = "purple";
+        }
+    });
+
+    document.addEventListener('keyup', function(event) {
+        var key = event.key;
+        if (document.getElementById(key)) {
+            document.getElementById(key).style.backgroundColor = "darkred";
+        }
+    });
+</script>
+</head>
+
+<h2>Teclas multicolor</h2>
+
+<body>
+    <div id="w">W</div>
+    <div id="a">A</div>
+    <div id="s">S</div>
+    <div id="d">D</div>
+    <div id="z">Z</div>
+    <div id="x">X</div>
+</body>
+
+</html>
